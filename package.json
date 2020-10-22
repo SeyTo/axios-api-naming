@@ -1,0 +1,35 @@
+{
+  "name": "axios_api_naming",
+  "version": "1.0.0",
+  "description": "Creates configuration for axios based on a json structure of list of API names and miscs.",
+  "main": "lib/src/index.ts",
+  "types": "lib/src/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "author": "rj <rajibbajracharya@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "ts-mocha \"__tests__/**/*.ts\" --recursive --exit",
+    "lint": "eslint . --fix",
+    "build": "rm -rdf ./lib && tsc -d",
+    "pub": "yarn lint && yarn build && bump patch && npm publish"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^8.0.3",
+    "bump-version": "^0.5.0",
+    "chai": "^4.2.0",
+    "mocha": "^8.2.0",
+    "ts-mocha": "^7.0.0",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "axios": "^0.20.0"
+  }
+}
